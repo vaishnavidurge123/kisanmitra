@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <h1>🌾 Admin Dashboard</h1>
+
+    <h3>Project Statistics</h3>
+
+    <div class="feature-box">
+        Total Farmer Queries: 125
+    </div>
+
+    <div class="feature-box">
+        Images Analyzed: 47
+    </div>
+
+    <div class="feature-box">
+        Active Users: 18
+    </div>
+
+    <br>
+
+    <button onclick="logout()">
+        Logout
+    </button>
+
+</div>
+
+<script>
+
+if(
+!localStorage.getItem(
+"LoggedIn"
+)
+){
+    window.location.href =
+    "admin.html";
+}
+
+function logout(){
+
+    localStorage.removeItem(
+    "LoggedIn"
+    );
+
+    window.location.href =
+    "admin.html";
+}
+
+</script>
+
+</body>
+</html>
